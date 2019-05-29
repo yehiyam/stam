@@ -4,7 +4,7 @@
     "lerna": "./node_modules/.bin/lerna",
     "test": "lerna changed 2>/dev/null | xargs -n 1  lerna run test --scope",
     "lint": "lerna changed 2>/dev/null | xargs -n 1  lerna run lint --scope",
-    "bump-version": "lerna changed 2>/dev/null | xargs -n 1  lerna version patch --scope"
+    "bump-version": "lerna version patch"
 
   },
   "private": true,
