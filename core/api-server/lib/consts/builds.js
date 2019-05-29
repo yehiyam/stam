@@ -1,7 +1,7 @@
 
 const BUILD_TRIGGERS = ['checksum', 'env'];
 
-const BUILD_GUIDE = 'Use the Hkube dashboard or the Hkube API api/v1/builds/status/<buildId> to follow the build progress';
+const BUILD_GUIDE = 'Use the Hkube dashboard or the Hkube API api/v1/builds/status/<buildId> to follow the build progress 2';
 
 const MESSAGES = {
     FIRST_BUILD: `a build was triggered due to first algorithm update. ${BUILD_GUIDE}`,
