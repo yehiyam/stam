@@ -18,6 +18,7 @@ install:
 - npm i
 - npm run lerna bootstrap
 script:
+- lerna changed -p
 - npm run lerna run lint && npm run lerna run test:cov
 # after_success:
 # - |
