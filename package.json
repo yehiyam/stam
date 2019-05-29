@@ -1,0 +1,7 @@
+{
+  "name": "hkube",
+  "private": true,
+  "devDependencies": {
+    "lerna": "^3.14.1"
+  }
+}
