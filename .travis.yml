@@ -29,6 +29,7 @@ script:
     git checkout -f -b version-branch
     # npm version patch -m "$(git log -1 --pretty=%B) .... bump version [skip ci]"
     npm run bump-version
+    npm version patch -m "$(git log -1 --pretty=%B) .... bump version [skip ci]"
     git push origin version-branch:master --follow-tags
     docker login --username yehiyam --password ${DOCKER_HUB_PASS}
   else

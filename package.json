@@ -1,10 +1,11 @@
 {
   "name": "hkube",
+  "version": "1.1.1000",
   "scripts": {
     "lerna": "./node_modules/.bin/lerna",
     "test": "lerna changed 2>/dev/null | xargs -n 1  lerna run test --scope",
     "lint": "lerna changed 2>/dev/null | xargs -n 1  lerna run lint --scope",
-    "bump-version": "lerna version patch --no-push --yes -m '$(git log -1 --pretty=%B) .... bump version [skip ci]'"
+    "bump-version": "lerna version patch --no-push --no-git-tag-version --yes -m '$(git log -1 --pretty=%B) .... bump version [skip ci]'"
 
   },
   "private": true,
