@@ -6,7 +6,7 @@
     "test": "lerna changed 2>/dev/null | xargs -n 1  lerna run test --scope",
     "lint": "lerna changed 2>/dev/null | xargs -n 1  lerna run lint --scope",
     "update-package-lock-json": "lerna exec \"npm install -s --ignore-scripts --package-lock-only --no-audit\" && git add **/package-lock.json",
-    "bump-version": "npm run update-package-lock-json && lerna version patch --no-push --yes -m \"$(git log -1 --pretty=%B) .... bump version [skip ci]\""
+    "bump-version": "lerna version patch --no-push --yes -m \"$(git log -1 --pretty=%B) .... bump version [skip ci]\" && npm run update-package-lock-json"
   },
   "private": true,
   "devDependencies": {
