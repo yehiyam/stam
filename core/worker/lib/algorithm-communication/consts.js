@@ -2,6 +2,7 @@ module.exports = {
     adapters: {
         ws: 'ws',
         socket: 'socket',
-        loopback: 'loopback'
+        loopback: 'loopback',
+        stam: 'stam'
     }
 };
