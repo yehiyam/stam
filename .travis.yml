@@ -11,6 +11,7 @@ branches:
 before_install: ./scripts/beforeInstall.sh
 install:
 - npm i
+- lerna changed
 - lerna bootstrap
 script:
 - npm run lint

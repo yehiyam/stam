@@ -8,10 +8,16 @@ if ([ "$TRAVIS_BRANCH" == "master" ] || [ ! -z "$TRAVIS_TAG" ]) && [ "$TRAVIS_PU
     git status
     git checkout -f -b version-branch
     # npm version patch -m "$(git log -1 --pretty=%B) .... bump version [skip ci]"
+    MESSAGE="$(git log -1 --pretty=%B) .... bump version [skip ci]"
+    lerna version patch --no-push --yes --no-git-tag-version -m ${MESSAGE} 
+    lerna exec "npm install -s --ignore-scripts --package-lock-only --no-audit"
+    git add core/*/package-lock.json 
+    git add core/*/package.json 
+    git commit -m ${MESSAGE}
     npm run bump-version
-    npm version patch -m "$(git log -1 --pretty=%B) .... bump version [skip ci]"
+    npm version patch -m ${MESSAGE}
     git push origin version-branch:master --follow-tags
-    docker login --username yehiyam --password ${DOCKER_HUB_PASS}
+    # docker login --username yehiyam --password ${DOCKER_HUB_PASS}
   else
     echo "version skiped!"
   fi
