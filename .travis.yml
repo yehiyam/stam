@@ -26,6 +26,7 @@ script:
     git config --global user.name "Travis CI"
     git remote set-url --push origin "https://${GH_TOKEN}@github.com/${TRAVIS_REPO_SLUG}.git"
     git remote -v
+    git status
     git checkout -f -b version-branch
     # npm version patch -m "$(git log -1 --pretty=%B) .... bump version [skip ci]"
     npm run bump-version
