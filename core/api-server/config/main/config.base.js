@@ -109,4 +109,6 @@ config.storageAdapters = {
     }
 };
 
+config.writeSwaggerJson = process.env.WRITE_SWAGGER_JSON === 'true';
+
 module.exports = config;
