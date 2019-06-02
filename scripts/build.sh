@@ -1,6 +1,6 @@
 #!/bin/bash
 set -ev
-echo ${CHANGED}
+echo ${DOCKER_HUB_PASS} | docker login --username yehiyam --password-stdin
 for REPO in ${CHANGED}
 do
   echo ${REPO} changed. Running build
