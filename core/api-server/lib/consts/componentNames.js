@@ -7,7 +7,7 @@ const Components = {
     REST_API: 'Rest-API',
     WEBHOOK_HANDLER: 'Webhook-Handler',
     JOBS_PRODUCER: 'Jobs-Producer',
-    EXECUTION_SERVICE: 'Execution-Service',
+    EXECUTION_SERVICE: 'Execution-Service2',
 };
 
 module.exports = Components;

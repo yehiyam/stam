@@ -18,6 +18,7 @@ script:
 - echo ${CHANGED}
 - ./scripts/test.sh
 - ./scripts/createVersion.sh
+- ./scripts/build.sh
 # deploy:
 #   skip_cleanup: true
 #   provider: script
