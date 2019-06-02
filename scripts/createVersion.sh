@@ -14,7 +14,6 @@ if ([ "$TRAVIS_BRANCH" == "master" ] || [ ! -z "$TRAVIS_TAG" ]) && [ "$TRAVIS_PU
     git add core/*/package-lock.json 
     git add core/*/package.json 
     git commit -m "${MESSAGE}"
-    npm run bump-version
     npm version patch -m "${MESSAGE}"
     git push origin version-branch:master --follow-tags
     # docker login --username yehiyam --password ${DOCKER_HUB_PASS}
