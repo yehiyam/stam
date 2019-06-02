@@ -4,14 +4,14 @@ node_js:
 - '10'
 services:
 - docker
-- redis
+- redis-server
 branches:
   only:
   - master
 before_install: ./scripts/beforeInstall.sh
 install:
 - npm i
-- lerna changed
+- export CHANGED=$(lerna changed)
 - lerna bootstrap
 script:
 - npm run lint
