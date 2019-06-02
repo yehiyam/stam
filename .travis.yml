@@ -12,10 +12,11 @@ before_install: ./scripts/beforeInstall.sh
 install:
 - npm i
 - export CHANGED=$(lerna changed)
+- echo ${CHANGED}
 - lerna bootstrap
 script:
-- npm run lint
-- npm run test
+- echo ${CHANGED}
+- ./scripts/test.sh
 - ./scripts/createVersion.sh
 # deploy:
 #   skip_cleanup: true
