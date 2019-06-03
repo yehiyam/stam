@@ -19,6 +19,7 @@ script:
 - ./scripts/test.sh
 - ./scripts/createVersion.sh
 - ./scripts/build.sh
+- ./scripts/trigger.sh
 # deploy:
 #   skip_cleanup: true
 #   provider: script
