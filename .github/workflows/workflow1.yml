@@ -1,8 +1,6 @@
 name: get-versions
 on:
-  schedule:
-    # * is a special character in YAML so you have to quote this string
-  - cron:  '*/5 * * * *'
+  push
 jobs:
   pack:
     # Job name is Greeting
