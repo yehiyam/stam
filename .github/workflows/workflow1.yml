@@ -7,14 +7,14 @@ jobs:
     name: pack
     # This job runs on Linux
     runs-on: ubuntu-latest
-    steps:
-    - run: mkdir -p path/to/artifact
-    - run: echo hello > path/to/artifact/world.txt   
+    steps:  
     - uses: actions/checkout@v1
     # This step uses the hello-world-action stored in this workflow's repository.
+    - run: mkdir -p path/to/artifact
+    - run: echo hello > path/to/artifact/world.txt 
     - uses: actions/upload-artifact@master
       with:
         name: my-artifact
-        path: path/to/artifact/world.txt
+        path: path/to/artifact
     # This step prints the time.
     - run: echo "The time was ${{ steps.hello.outputs.time }}"
