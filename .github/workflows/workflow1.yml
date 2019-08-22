@@ -15,6 +15,6 @@ jobs:
     - uses: actions/upload-artifact@master
       with:
         name: my-artifact
-        path: path/to/artifact
+        path: path/to/artifact/world.txt
     # This step prints the time.
     - run: echo "The time was ${{ steps.hello.outputs.time }}"
