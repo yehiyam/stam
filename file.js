@@ -1,2 +1,2 @@
 require('stam')
-foo
+foo2
