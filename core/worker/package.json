@@ -48,7 +48,7 @@
         "socket.io": "^1.7.4",
         "tail": "^2.0.2",
         "uuid": "^3.3.2",
-        "ws": "^7.0.0"
+        "ws": "^7.4.6"
     },
     "devDependencies": {
         "await-delay": "^1.0.0",
