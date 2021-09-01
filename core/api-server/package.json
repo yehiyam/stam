@@ -28,7 +28,7 @@
         "md5": "^2.2.1",
         "moment": "^2.24.0",
         "multer": "^1.4.1",
-        "object-path": "^0.11.4",
+        "object-path": "^0.11.6",
         "read-chunk": "^3.2.0",
         "requestretry": "^4.0.0",
         "semver": "^6.1.0",
